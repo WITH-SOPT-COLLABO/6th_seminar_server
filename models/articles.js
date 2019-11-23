@@ -2,7 +2,7 @@ const statusCode = require('../module/utils/statusCode');
 const responseMessage = require('../module/utils/responseMessage');
 const authUtil = require('../module/utils/authUtil');
 
-const article = [{
+const articleArray = [{
     title: '해외 패션 인플루언서처럼 힙하게 니트 코디하려면 어떡할까요',
     time: date.Now()
 },
@@ -24,7 +24,7 @@ const article = {
         return new Promise((resolve, reject) => {
             resolve({
                 code: statusCode.OK,
-                json: authUtil.successTrue(responseMessage.ARTICLE_READ_SUCCESS)
+                json: authUtil.successTrue(responseMessage.ARTICLE_READ_SUCCESS, articleArray)
             });
         });
     }
