@@ -24,7 +24,7 @@ const bands = {
         return new Promise((resolve, reject) => {
             resolve({
                 code: statusCode.OK,
-                json: authUtil.successTrue(statusCOde.OK, responseMessage.BAND_READ_SUCCESS, bandArray)
+                json: authUtil.successTrue(statusCode.OK, responseMessage.BAND_READ_SUCCESS, bandArray)
             });
         });
     }
