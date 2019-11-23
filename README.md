@@ -1,5 +1,32 @@
 # TEAM5 
 ## BASE URL : http://18.190.120.107
+
+## **[POST] ~/user/signin**
+### Request - Header
+| 메소드 | 파라미터 |
+|:-------|:----------|
+|Content-Type|application/json|
+
+### Request - Body
+| 변수 | 타입 | 설명 |
+|:----------|:----------|:-----------|
+| userId | String | 회원의 아이디 |
+| password | String | 회원의 비민번호 |
+
+### Response - body
+##### SUCCESS
+```
+{
+    "status": 200,
+    "success": true,
+    "message": "로그인 성공",
+    "data": {
+        "jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImduZ3NuIiwibmFtZSI6IuuwleqyveyEoCJ9.3GxjfeyyEPK1mHuskJOpjK7ZESOlYQYBi_5cE-4mgz0"
+    }
+}
+```
+
+
 ## **[GET] ~/articles**
 ### Request - Header
 | 메소드 | 파라미터 |
@@ -40,83 +67,6 @@
              title: '따즈아 요리초보 요리사만들기'
         }
     ]
-}
-```
-
----
-
-## **[POST] ~/blogs/**
-### Request - Header
-| 메소드 | 파라미터 |
-|:-------|:----------|
-|Content-Type|application/json|
-
-### Request - Body
-
-| 변수 | 타입 | 설명 |
-|:-------:|:-------:|:-------:|
-|blogName|String   |게시물 제목|
-|owner|Int   |게시물 주인의 Idx|
-
-```
-{
-	"blogName" : "나의 블로그",
-	"owner" : "24"
-}
-```
-
-### Response - body
-##### SUCCESS
-```
-{
-    "status": "블로그 작성 성공",
-    "success": true
-}
-```
-
-
----
-## **[PUT] ~/blogs/{blogIdx}**
-### Request - Header
-| 메소드 | 파라미터 |
-|:-------|:----------|
-|Content-Type|application/json|
-
-### Request - Body
-
-| 변수 | 타입 | 설명 |
-|:-------:|:-------:|:-------:|
-|blogName|String  |바꿀 블로그 이름|
-
-```
-{
-	"blogName" : "나의 블로그!@#!@#!@"
-}
-```
-
-### Response - body
-##### SUCCESS
-```
-{
-    "status": "블로그 수정 성공",
-    "success": true
-}
-```
-
----
-
-## **[DELETE] ~/blogs/{blogIdx}**
-### Request - Header
-| 메소드 | 파라미터 |
-|:-------|:----------|
-|Content-Type|application/json|
-
-### Response - body
-##### SUCCESS
-```
-{
-    "status": "블로그 삭제 성공",
-    "success": true
 }
 ```
 
