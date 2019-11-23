@@ -37,12 +37,25 @@
 ##### SUCCESS
 ```
 {
-    "status": "게시물 조회 성공",
+    "status": 200,
     "success": true,
-    "message": [
+    "message": "게시글 조회 성공",
+    "data": [
         {
-            title: '해외 패션 인플루언서처럼 힙하게 니트 코디하려면 어떡할까요',
-            time: '10분 전'
+            "title": "해외 패션 인플루언서처럼 힙하게 니트 코디하려면 어떡할까요",
+            "time": "10분 전"
+        },
+        {
+            "title": "포드 신형 익스플로러 리뷰",
+            "time": "10분 전"
+        },
+        {
+            "title": "머리 아플 때 두통약 자주 먹어도 괜찮을까?",
+            "time": "10분 전"
+        },
+        {
+            "title": "똑같은 가방말고! 아는 사람만 안다는 특별한 가방",
+            "time": "10분 전"
         }
     ]
 }
@@ -63,7 +76,7 @@
     "success": true,
     "message": [
         {
-             picture: 'http:~',
+             picture: 'https://with-sopt-server25.s3.ap-northeast-2.amazonaws.com/20191123_160601207_04.jpg',
              title: '따즈아 요리초보 요리사만들기'
         }
     ]
